@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SolatTime - Reminders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top-bar">
+      <div class="brand"><span class="star">&#10040;</span> SolatTime</div>
+      <a href="index.html" class="nav-link">Prayer Times</a>
+    </header>
+
+    <a href="index.html" class="back-btn">&#8592; Back to Prayer Times</a>
+
+    <h1>My Activity Reminders</h1>
+
+    <form id="reminderForm" class="form-card">
+      <div class="field">
+        <label for="activity">Activity</label>
+        <input type="text" id="activity" placeholder="e.g. Read Surah Al-Kahf">
+      </div>
+
+      <div class="field">
+        <label for="prayer">After which prayer</label>
+        <select id="prayer">
+          <option value="Fajr">Subuh</option>
+          <option value="Dhuhr">Zohor</option>
+          <option value="Asr">Asar</option>
+          <option value="Maghrib">Maghrib</option>
+          <option value="Isha">Isyak</option>
+        </select>
+      </div>
+
+      <button type="submit" class="primary-btn">Save</button>
+    </form>
+
+    <p id="formMessage"></p>
+
+    <ul id="reminderList"></ul>
+  </div>
+
+  <script src="reminder.js"></script>
+</body>
+</html>

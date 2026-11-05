@@ -1,0 +1,10 @@
+# installed packages (recreated with "npm install")
+node_modules/
+
+# report drafts (submitted separately, not part of the app)
+*.docx
+~$*
+
+# system files
+.DS_Store
+Thumbs.db

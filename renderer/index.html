@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SolatTime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Location picker: shown first, before any prayer times -->
+  <div id="picker" class="picker">
+    <div class="picker-box">
+      <p class="eyebrow">Step 1</p>
+      <h1>Choose your location</h1>
+      <p class="hint">Prayer times are different for each place. Type your town or city in Malaysia.</p>
+      <form id="searchForm" class="search-form">
+        <input type="text" id="searchBox" class="search-box" placeholder="Town or city" autocomplete="off">
+        <button type="submit" class="primary-btn">Search</button>
+      </form>
+      <p id="searchStatus" class="search-status"></p>
+      <button id="closePicker" class="link-btn" hidden>Cancel</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- LEFT: clock, next prayer, date, location -->
+    <section class="left">
+      <header class="top-bar">
+        <div class="brand"><span class="star">&#10040;</span> SolatTime</div>
+        <a href="reminder.html" class="nav-link">My Reminders</a>
+      </header>
+
+      <div>
+        <p class="small-label">Current time</p>
+        <p class="clock"><span id="clockMain">--:--</span><span id="clockSec" class="clock-sec">:--</span> <span id="clockPeriod" class="clock-sec"></span></p>
+        <p id="countdown" class="countdown"></p>
+      </div>
+
+      <!-- TODO (Task 3): fill this in from your showSuggestion() function -->
+      <div class="suggestion-box">
+        <p class="suggestion-title">Suggested activity</p>
+        <p id="suggestion" class="suggestion-text">-</p>      </div>
+
+      <footer class="bottom">
+        <p id="hijriDate" class="hijri">&#9790; -</p>
+        <p id="gregDate" class="greg">-</p>
+        <div class="bottom-row">
+          <button id="locationBtn" class="location-btn">&#9906; <span id="locationName">Choose location</span> &#9662;</button>
+          <span class="source">Source: JAKIM e-Solat, <span id="methodName">-</span></span>
+        </div>
+      </footer>
+    </section>
+
+    <!-- RIGHT: the six prayer time cards -->
+    <section class="right">
+      <p id="message" class="message">Choose a location to see today's prayer times.</p>
+      <div id="cards" class="cards"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
